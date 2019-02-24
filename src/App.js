@@ -7,9 +7,15 @@ class App extends Component {
     return (
       <div className="App">
         <div className="todo-list-wrap">
-          Container
-          <div className="header-component">
-          Header
+          <div className="header-background">
+            <div className="header-text">
+              Things To Do
+            </div>
+              <div className="todo-list-content">
+                <form>
+                  <input placeholder="What needs to be done?" />
+                </form>
+              </div>
           </div>
         </div>
       </div>
