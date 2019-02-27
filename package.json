@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base src --inline --hot"
+    "start": "webpack-dev-server --content-base src --inline --hot",
+    "build": "webpack",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +15,7 @@
   "dependencies": {
     "mobx": "^2.7.0",
     "mobx-react": "^3.5.9",
-    "react": "^15.2.1",
+    "react": "^15.6.2",
     "react-dom": "^15.3.0"
   },
   "devDependencies": {

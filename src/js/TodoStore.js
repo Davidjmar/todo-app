@@ -24,6 +24,16 @@ export class TodoStore {
     this.todos.push(new Todo(value))
   }
 
+  countLI() {
+    const toBeDone = this.todos.filter(todo => !todo.complete)
+    var t = 0;
+    for (var i = 0; i < todos.length; i++) {
+      if (todos[i].complete == true)
+        t++;
+    }
+    return 6
+  }
+
   clearComplete = () => {
     const incompleteTodos = this.todos.filter(todo => !todo.complete)
     this.todos.replace(incompleteTodos)
@@ -34,10 +44,6 @@ export class TodoStore {
     this.todos.replace(removeItem)
   }
 
-  // toggleLineThrough = (id) => {
-  //   const lineItem = this.todos.filter(todo => todo.id !== id);
-  //   this.todos.setAttribute("class", "Complete")
-  // }
 }
 
 export default new TodoStore

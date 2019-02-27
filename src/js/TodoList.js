@@ -28,12 +28,16 @@ export default class TodoList extends React.Component {
     this.props.store.clearSelected(todo.id)
   }
 
+  countReturner()
+  {
+    var t = this.props.store.countLI()
+  }
+
   render()
   {
-    const{ clearComplete, filter, filteredTodos, todos} = this.props.store
-
+    const{ clearComplete, filter, filteredTodos, todos, countLI} = this.props.store
     const todoLis = filteredTodos.map(todo => (
-      <li key={todo.id}>
+      <li key={todo.id} id = "LII">
       <div className = "todoListHolder">
         <input className="checkboxStyling" type="checkbox" id="cbx" onChange={this.toggleComplete.bind(this, todo)} value={todo.complete} checked={todo.complete} />
           <span className= "todoListTitle" >{todo.value}</span>
@@ -56,7 +60,7 @@ export default class TodoList extends React.Component {
           <div className="todo-list-content">
             <input className="new" onKeyPress={this.createNew.bind(this)} placeholder="What needs to be done?"/>
 
-            <ul>{todoLis}</ul>
+            <ul id="UL">{todoLis}</ul>
 
             <div className="filterHolder">
               <input className="filter" value={filter} onChange={this.filter.bind(this)} placeholder="Search Tasks"/>
@@ -65,7 +69,7 @@ export default class TodoList extends React.Component {
           <div className = "clearSelected">
 
             <div className="tasksLeftHolder">
-              <span className="tasksLeft"> Items Left: {this.props.store.length} </span>
+              <span className="tasksLeft" href="#"> Items Left:{countLI} </span>
               <a className="clearComplete" href="#" onClick={clearComplete}>Clear Complete</a>
             </div>
 
