@@ -1,5 +1,5 @@
-# todo-app
-# This is  a mobx-reactjs based web-app that allows a user to add tasks to a todo list, mark them as completed and, delete todo's, search through available todo's, delete all that are marked complete all while displaying the total number of uncompleted tasks. 
+## Mobx-Reactjs Web-app todo-list
+This is  a mobx-reactjs based web-app that allows a user to add tasks to a todo list, mark them as completed and, delete todo's, search through available todo's, delete all that are marked complete all while displaying the total number of uncompleted tasks. 
 
 ## Run the App!:
 https://david-todo-app.netlify.com/
