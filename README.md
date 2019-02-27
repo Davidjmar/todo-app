@@ -3,6 +3,7 @@ This is  a mobx-reactjs based web-app that allows a user to add tasks to a todo 
 
 ## Run the App!:
 https://david-todo-app.netlify.com/
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4fb9d6d5-7ea7-478d-94dd-7cb58bf5f17f/deploy-status)](https://app.netlify.com/sites/david-todo-app/deploys)
 
 # This project utilized react-mobx, and webpack installs for its creation.
