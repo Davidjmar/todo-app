@@ -20,9 +20,9 @@
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    /* background: url("./GrainSunrise.png") center;
-      background-image: url("./GrainSunrise.png");
-      background-size: cover; */
+    background: url('http://www.daveallenphotography.com/gallery/l_smoky_mountains_sunrise.jpg') no-repeat center;
+      background-image: url('http://www.daveallenphotography.com/gallery/l_smoky_mountains_sunrise.jpg');
+      background-size: cover;
 }
 
 .header-text {
@@ -31,10 +31,10 @@
   margin-left: 0px;
   margin-right: 0px;
   padding: 0px;
-  color: black;
+  color: White;
   font-family: sans-serif;
   font-weight: lighter;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 
@@ -121,18 +121,18 @@ span {
   color: black;
   font-family: sans-serif;
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .clearComplete{
   color: #008CBA;
   text-decoration: none;
-  margin-left: 120px;
+  margin-left: 75px;
   text-align: right;
 }
 
 .tasksLeftHolder{
-  padding-top: 30px;
+  padding-top: 13px;
   text-align:left;
 }
 
@@ -175,4 +175,8 @@ span {
 .todoListTitleContainer
 {
   padding-top: 5px;
+}
+
+.todo-list-content{
+  padding-top: 10px;
 }

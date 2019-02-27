@@ -35,7 +35,7 @@ export default class TodoList extends React.Component {
 
   render()
   {
-    const{ clearComplete, filter, filteredTodos, todos, countLI} = this.props.store
+    const{ clearComplete, filter, filteredTodos, todos} = this.props.store
     const todoLis = filteredTodos.map(todo => (
       <li key={todo.id} id = "LII">
       <div className = "todoListHolder">
@@ -47,8 +47,16 @@ export default class TodoList extends React.Component {
       </div>
       </li>
     ))
-
-
+    const countLI = () => {
+      var count=0
+      for (var i = 0; i<todos.length; ++i)
+      {
+        if(todos[i].complete == false) {
+          count++
+        }
+      }
+      return count
+    }
     return <div>
     <div className="App">
         <div className="todo-list-wrap">
@@ -69,8 +77,8 @@ export default class TodoList extends React.Component {
           <div className = "clearSelected">
 
             <div className="tasksLeftHolder">
-              <span className="tasksLeft" href="#"> Items Left:{countLI} </span>
-              <a className="clearComplete" href="#" onClick={clearComplete}>Clear Complete</a>
+              <span className="tasksLeft" href="#"> Tasks Left: {countLI()} </span>
+              <a className="clearComplete" href="#" onClick={clearComplete}>Clear Completed Tasks</a>
             </div>
 
           </div>
