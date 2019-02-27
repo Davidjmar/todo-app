@@ -2,7 +2,6 @@ import React from 'react';
 import { observer } from "mobx-react";
 
 
-
 @observer
 export default class TodoList extends React.Component {
   createNew(e)
@@ -35,21 +34,18 @@ export default class TodoList extends React.Component {
 
     const todoLis = filteredTodos.map(todo => (
       <li key={todo.id}>
-
-
-      <div className = "round">
+      <div className = "todoListHolder">
         <input className="checkboxStyling" type="checkbox" id="cbx" onChange={this.toggleComplete.bind(this, todo)} value={todo.complete} checked={todo.complete} />
+          <span className= "todoListTitle" >{todo.value}</span>
+          <div className = "deleteButton">
+            <button href ="#" onClick={this.deleteItem.bind(this, todo)} > X </button>
+          </div>
       </div>
-
-      <div className = "todoListTitleContainer">
-        <span className= "todoListTitle" >{todo.value}</span>
-        <button href ="#" onClick={this.deleteItem.bind(this, todo)} > X </button>
-      </div>
-
       </li>
     ))
-    return <div>
 
+
+    return <div>
     <div className="App">
         <div className="todo-list-wrap">
           <div className="header-background">
@@ -58,20 +54,24 @@ export default class TodoList extends React.Component {
             </div>
           </div>
           <div className="todo-list-content">
-
             <input className="new" onKeyPress={this.createNew.bind(this)} placeholder="What needs to be done?"/>
-            <input className="filter" value={filter} onChange={this.filter.bind(this)} placeholder="Search Tasks"/>
 
             <ul>{todoLis}</ul>
 
-            <div className = "clearSelected">
-              <a href="#" onClick={clearComplete}>Clear Complete</a>
+            <div className="filterHolder">
+              <input className="filter" value={filter} onChange={this.filter.bind(this)} placeholder="Search Tasks"/>
+            </div>
+          </div>
+          <div className = "clearSelected">
+
+            <div className="tasksLeftHolder">
+              <span className="tasksLeft"> Items Left: {this.props.store.length} </span>
+              <a className="clearComplete" href="#" onClick={clearComplete}>Clear Complete</a>
             </div>
 
           </div>
         </div>
     </div>
-
-      </div>
+    </div>
   }
 }

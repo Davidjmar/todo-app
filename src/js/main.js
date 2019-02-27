@@ -7,4 +7,3 @@ import TodoList from "./TodoList"
 const app = document.getElementById("app")
 
 ReactDOM.render(<TodoList store={TodoStore} />, app)
-

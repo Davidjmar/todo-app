@@ -33,6 +33,11 @@ export class TodoStore {
     const removeItem = this.todos.filter(todo => todo.id !== id);
     this.todos.replace(removeItem)
   }
+
+  // toggleLineThrough = (id) => {
+  //   const lineItem = this.todos.filter(todo => todo.id !== id);
+  //   this.todos.setAttribute("class", "Complete")
+  // }
 }
 
 export default new TodoStore
